@@ -1,6 +1,6 @@
 const db = {
   bg:
-    'https://super.abril.com.br/wp-content/uploads/2019/05/si_403_oraculo_donkeykong.png',
+    'http://cdn30.us1.fansshare.com/image/donkeykong64/donkey-kong-country-returns-buddies-wallpaper-donkey-kong-1353719482.jpg',
   title: 'Quiz Donkey Kong Country',
   description:
     'Teste os seus conhecimentos sobre Donkey Kong Country no Alura Quiz',

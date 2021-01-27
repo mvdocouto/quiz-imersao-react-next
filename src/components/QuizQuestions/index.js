@@ -41,7 +41,7 @@ function QuizQuestions({ question, questionIndex, totalQuestions }) {
             answers={question.alternatives}
             correctAnswers={question.answer}
           />
-          <Button>Confirmar</Button>
+          <Button type="submit">Confirmar</Button>
         </Form>
       </Widget.Content>
     </Widget>
