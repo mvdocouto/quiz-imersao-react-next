@@ -1,6 +1,6 @@
 const db = {
   bg:
-    'http://cdn30.us1.fansshare.com/image/donkeykong64/donkey-kong-country-returns-buddies-wallpaper-donkey-kong-1353719482.jpg',
+    'https://d2skuhm0vrry40.cloudfront.net/2018/articles/2018-04-24-15-31/digitalfoundry-2018-donkey-kong-country-tropical-freeze-another-welcome-switch-port-1524580304470.jpg/EG11/resize/1200x-1/digitalfoundry-2018-donkey-kong-country-tropical-freeze-another-welcome-switch-port-1524580304470.jpg',
   title: 'Quiz Donkey Kong Country',
   description:
     'Teste os seus conhecimentos sobre Donkey Kong Country no Alura Quiz',
