@@ -1,6 +1,5 @@
 const db = {
-  bg:
-    'https://d2skuhm0vrry40.cloudfront.net/2018/articles/2018-04-24-15-31/digitalfoundry-2018-donkey-kong-country-tropical-freeze-another-welcome-switch-port-1524580304470.jpg/EG11/resize/1200x-1/digitalfoundry-2018-donkey-kong-country-tropical-freeze-another-welcome-switch-port-1524580304470.jpg',
+  bg: 'https://wallpapercave.com/wp/fHGE4YU.jpg',
   title: 'Quiz Donkey Kong Country',
   description:
     'Teste os seus conhecimentos sobre Donkey Kong Country no Alura Quiz',
@@ -10,10 +9,9 @@ const db = {
         'https://epicplay.com/wp-content/uploads/2018/11/donkey-kong.png.webp',
       title: 'Em Donkey Kong Country, o que os Kremlings roubam?',
       description: '',
-      answer: 3,
+      answer: 2,
       alternatives: [
         'A casa na árvore de DK',
-        'A Dixie Kong',
         'O barril do Diddy',
         'Hoard Banana',
         'O Enguarde',
@@ -28,7 +26,6 @@ const db = {
       alternatives: [
         'Kudgel',
         'Queen B',
-        'Master Necky Snr',
         'Really Gnawty',
         'Rei K. Rool',
       ],

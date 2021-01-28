@@ -11,14 +11,13 @@ const Widget = styled.div`
   h3 {
     font-size: 16px;
     font-weight: 700;
-    line-height: 1;
+    line-height: 1.5;
     margin-bottom: 0;
-    line-height: 24px;
   }
   p {
     font-size: 14px;
     font-weight: 400;
-    line-height: 1;
+    line-height: 1.5;
   }
 `;
 
@@ -32,6 +31,18 @@ Widget.Header = styled.header`
 
   * {
     margin: 0;
+  }
+`;
+
+Widget.Image = styled.div`
+  width: 100%;
+  max-height: 200px;
+  overflow: hidden;
+  
+  img {
+    width: 100%;
+    object-position: center;
+    object-fit: cover;
   }
 `;
 

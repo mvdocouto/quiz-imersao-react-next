@@ -44,8 +44,10 @@ export default function Home() {
           </Widget.Content>
         </Widget>
         <Widget>
-          <h1>Quizzes da Galera</h1>
-          <p>Bla...</p>
+          <Widget.Content>
+            <h1>Quizzes da Galera</h1>
+            <p>De uma olhada nestes incríveis quizzes que o pessoal da Imersão Next.js fez:</p>
+          </Widget.Content>
         </Widget>
 
         <Footer />

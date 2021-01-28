@@ -18,28 +18,34 @@ export const Form = styled.form`
   }
 `;
 
-function QuizQuestions({ question, questionIndex, totalQuestions }) {
+function QuizQuestions({
+  question,
+  questionIndex,
+  onSubmit,
+  totalQuestions,
+  correctAnswers,
+  setCorrectAnswers,
+}) {
   return (
     <Widget>
       <Widget.Header>
         <h3>{`Pergunta ${questionIndex + 1} de ${totalQuestions}`}</h3>
       </Widget.Header>
-      <img
-        src={question.image}
-        alt="Descrição"
-        style={{
-          width: '100%',
-          height: '150px',
-          objectFit: 'cover',
-        }}
-      />
+      <Widget.Image>
+        <img
+          src={question.image}
+          alt="Descrição"
+        />
+      </Widget.Image>
       <Widget.Content>
         <h2>{question.title}</h2>
         <p>{question.description}</p>
-        <Form>
+        <Form onSubmit={onSubmit}>
           <QuizAnswers
             answers={question.alternatives}
-            correctAnswers={question.answer}
+            rightOption={question.answer}
+            correctAnswers={correctAnswers}
+            setCorrectAnswers={setCorrectAnswers}
           />
           <Button type="submit">Confirmar</Button>
         </Form>
@@ -57,7 +63,10 @@ QuizQuestions.propTypes = {
     alternatives: PropTypes.arrayOf(PropTypes.string),
   }).isRequired,
   questionIndex: PropTypes.number.isRequired,
+  onSubmit: PropTypes.func.isRequired,
   totalQuestions: PropTypes.number.isRequired,
+  correctAnswers: PropTypes.number.isRequired,
+  setCorrectAnswers: PropTypes.func.isRequired,
 };
 
 export default QuizQuestions;
