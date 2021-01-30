@@ -23,21 +23,23 @@ const LoadingWidget = () => (
   </Widget>
 );
 
-const ResultWidget = ({ correct, total }) => (
-  <Widget>
-    <Widget.Header>
-      <h1>Resultado</h1>
-    </Widget.Header>
-    <Widget.Content>
-      <h1>{`Você acertou ${correct} questões em ${total}, parabéns!`}</h1>
-    </Widget.Content>
-  </Widget>
-);
+const ResultWidget = ({ correctAnswers, total }) => {
+  const totalCorrect = correctAnswers.filter((x) => x).length;
+  return (
+    <Widget>
+      <Widget.Header>
+        <h1>Resultado</h1>
+      </Widget.Header>
+      <Widget.Content>
+        <h1>{`Você acertou ${totalCorrect} questões em ${total}, parabéns!`}</h1>
+      </Widget.Content>
+    </Widget>
+  );
+};
 
 ResultWidget.propTypes = {
-  correct: PropTypes.number.isRequired,
-  total: PropTypes.func.isRequired,
-
+  correctAnswers: PropTypes.arrayOf(PropTypes.bool).isRequired,
+  total: PropTypes.number.isRequired,
 };
 
 const screenStates = {
@@ -49,7 +51,7 @@ const screenStates = {
 function quiz() {
   const [screenState, setScreenState] = useState(screenStates.LOADING);
   const [questionIndex, setQuestionIndex] = useState(0);
-  const [correctAnswers, setCorrectAnswers] = useState(0);
+  const [correctAnswers, setCorrectAnswers] = useState([]);
 
   const question = db.questions[questionIndex];
   const totalQuestions = db.questions.length;
@@ -58,8 +60,7 @@ function quiz() {
     setScreenState(screenStates.QUIZ);
   }, []);
 
-  const handleSubmit = (event) => {
-    event.preventDefault();
+  const handleSubmit = () => {
     const nextIndex = questionIndex + 1;
     if (nextIndex < totalQuestions) {
       setQuestionIndex(nextIndex);
@@ -85,7 +86,7 @@ function quiz() {
         )}
         {screenState === screenStates.RESULT && (
           <ResultWidget
-            correct={correctAnswers}
+            correctAnswers={correctAnswers}
             total={totalQuestions}
           />
         )}

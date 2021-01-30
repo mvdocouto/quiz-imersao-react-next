@@ -5,29 +5,30 @@ import Widget from '../Widget';
 
 function QuizAnswers({
   answers,
-  rightOption,
-  correctAnswers,
-  setCorrectAnswers,
+  questionIndex,
+  selectedAternative,
+  setSelectedAlternative,
+  isCorrect,
 }) {
-  const setResponse = (event) => {
-    const response = event.target.value;
-    if (parseInt(response, 10) === rightOption) {
-      setCorrectAnswers(correctAnswers + 1);
-    } else {
-      setCorrectAnswers(correctAnswers);
-    }
-  };
-
   return answers.map((answer, answerIndex) => {
     const answerId = `answer__${answerIndex}`;
+    const questionNumber = `question__${questionIndex}`;
+    const isSelected = selectedAternative === answerIndex;
+    const answerStatus = isCorrect ? 'SUCCESS' : 'ERROR';
+
     return (
-      <Widget.Topic as="label" htmlFor={answerId}>
+      <Widget.Topic
+        as="label"
+        htmlFor={answerId}
+        key={answerId}
+        data-selected={isSelected}
+        data-status={answerStatus}
+      >
         <input
           id={answerId}
-          name={rightOption}
-          value={answerIndex}
+          name={questionNumber}
           type="radio"
-          onClick={(event) => setResponse(event)}
+          onChange={() => setSelectedAlternative(answerIndex)}
         />
         {answer}
       </Widget.Topic>
@@ -37,7 +38,10 @@ function QuizAnswers({
 
 QuizAnswers.propTypes = {
   answers: PropTypes.arrayOf(PropTypes.string).isRequired,
-  rightOption: PropTypes.number.isRequired,
+  questionIndex: PropTypes.number.isRequired,
+  selectedAternative: PropTypes.number.isRequired,
+  isCorrect: PropTypes.number.isRequired,
+  setSelectedAlternative: PropTypes.func.isRequired,
 };
 
 export default QuizAnswers;

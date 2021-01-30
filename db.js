@@ -23,11 +23,44 @@ const db = {
       title: 'Qual desses chefes não tem em Donkey Kong Country?',
       description: '',
       answer: 0,
+      alternatives: ['Kudgel', 'Queen B', 'Really Gnawty', 'Rei K. Rool'],
+    },
+    {
+      image:
+        'https://oyster.ignimgs.com/mediawiki/apis.ign.com/donkey-kong-country-returns/1/10/Mugly_DKCR.jpg',
+      title: 'O que deve ser entregue ao Blue um dos Irmãos Ursos?',
+      description: '',
+      answer: 3,
+      alternatives: ['Um espelho', 'Skis', 'Caixa dos chocolates', 'Presente'],
+    },
+    {
+      image:
+        'https://oyster.ignimgs.com/mediawiki/apis.ign.com/donkey-kong-country-returns/1/10/Mugly_DKCR.jpg',
+      title: 'Qual é o nome do último chefe de Donkey Kong Country Returns?',
+      description: '',
+      answer: 1,
+      alternatives: ['Tiki Goons', 'Tiki Tong', 'King of Cling', 'Big Zings'],
+    },
+    {
+      image:
+        'https://oyster.ignimgs.com/mediawiki/apis.ign.com/donkey-kong-country-returns/1/10/Mugly_DKCR.jpg',
+      title:
+        'Em Dokey Kong Country Tropical Freeze, que personagem não é jogável?',
+      description: '',
+      answer: 3,
+      alternatives: ['Donkey Kong', 'Diddy', 'Cranky Kong', 'Funky Kong'],
+    },
+    {
+      image:
+        'https://oyster.ignimgs.com/mediawiki/apis.ign.com/donkey-kong-country-returns/1/10/Mugly_DKCR.jpg',
+      title: 'Qual o motivo para Capitain K. Rool raptar Donkey Kong em DKC2?',
+      description: '',
+      answer: 3,
       alternatives: [
-        'Kudgel',
-        'Queen B',
-        'Really Gnawty',
-        'Rei K. Rool',
+        'Ele queria comê-lo já que no mar não havia comida boa',
+        'Ele queria que Donkey Kong fosse um pirata e escondesse as bananas no meio de uma ilha',
+        'Ele queria que o macaco andasse na prancha e fosse devorado pelo Big Alligator Kong',
+        'Ele exigia a Banana Hoard de volta em troca do Kong raptado',
       ],
     },
   ],

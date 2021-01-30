@@ -38,7 +38,7 @@ Widget.Image = styled.div`
   width: 100%;
   max-height: 200px;
   overflow: hidden;
-  
+
   img {
     width: 100%;
     object-position: center;
@@ -74,7 +74,7 @@ Widget.Topic = styled.a`
 
   &:hover,
   &:focus {
-    opacity: 0.5;
+    opacity: 0.75;
   }
 `;
 
